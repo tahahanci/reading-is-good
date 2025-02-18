@@ -29,7 +29,7 @@ public class OrderServiceImpl implements OrderService {
             throw new OrderNotFoundException("Order not found!");
         }
 
-        log.info("Orders find, total orders count: {}", orders.size() + 1);
+        log.info("Orders find, total orders count: {}", orders.size());
         return orders.stream()
                 .map(orderMapper::orderResponseFromOrder)
                 .toList();
